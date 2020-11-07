@@ -44,12 +44,17 @@ console.log("\n");
 console.log("-- DO THE NUMBERS MATCH GAME --");
 
 //for loop with 10 iterations
+var index = 0; //count of the while loop
 for (var y = 0; y < 10; y++) {
-  y = randomNumber();
-  if (match(x, y)) {
-    logMatch(x, y);
-  } else {
-    logMismatch(x, y);
+  while (index < 10) {      //while loop to run up to 10 iterations
+    y = randomNumber();
+    if (match(x, y)) {
+      logMatch(x, y);
+    } else {
+      logMismatch(x, y);
+    }
+    index++;
   }
 }
+
 //end program

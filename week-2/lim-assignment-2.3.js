@@ -40,6 +40,6 @@ myLastName.lim = "Lim";
 
 // output
 console.log('\n')
-console.log("Hello " + myName() + " "  + myLastName() + "!");
+console.log("Hello " + myName() + " "  + myLastName() + "!")
 
 //end program
