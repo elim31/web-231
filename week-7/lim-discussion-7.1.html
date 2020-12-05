@@ -1,0 +1,35 @@
+<!--
+============================================
+; Title:  lim-discussion-7.1.html
+; Date:   1 Dec 2020
+; Author: Eunice Lim
+; Description: Discussion 7.1 JavaScript in Web Browsers
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discussion 7.1</title>
+</head>
+<body>  <!--start-->
+  <script>
+    //Using document.write to create a heading. I would like each sentence to be on separate lines
+    document.write("Eunice Lim");
+    document.write("Discussion 7.1");
+    document.write(new Date().toLocaleDateString());
+  </script>
+
+  <p id="purple">I want to change this font color to purple.</p>  <!--This is my sentence to modify -->
+
+    <script>
+
+   var color = document.getElementByClassName("purple");
+   color.style.color = "purple";  //I want to change it to purple
+
+    </script>
+</body>
+</html>
+
+<!--end-->
