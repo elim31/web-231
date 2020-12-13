@@ -1,0 +1,70 @@
+<!--
+============================================
+; Title:  lim-exercise-8.2.html
+; Author: Professor Krasso
+; Modified by: Eunice Lim
+; Date:   9 Dec 2020
+; Attribution: With help from Prof. Krasso, Georgia Welch-Cronin
+; Description: Dynamic HTML
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise 8.2</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: "Roboto", sans-serif; /*Roboto: 300, 400, 500 for the font*/
+    }
+    ul {
+      padding-top: 20px; /*The unordered list appear 20px below the topbar*/
+      margin: 0 auto; /*Center the unordered list (margin: 0 auto;) */
+    }
+    #topbar {
+      background-color: lightblue; /*Add a topbar and give it a different background color*/
+    }
+  </style>
+
+  <body>
+    <!--IDs for the JavaScript to apply to-->
+    <div id="topbar"><h1>Fruit Listing</h1></div>
+    <!--Add a topbar and title of unordered list-->
+    <div id="fruits"></div>
+
+    <!--Javascript starts here below-->
+    <script type="text/javascript">
+      function Fruit(id, type) {
+        //constructor object with 2 parameters to create an array with 2 fields
+        this.id = id;
+        this.type = type;
+      }
+
+      const fruits = [
+        //the array with 2 fields using the Fruit constructor
+        new Fruit("100", "Apple"),
+        new Fruit("101", "Banana"),
+        new Fruit("102", "Cherry"),
+        new Fruit("103", "Durian"),
+      ];
+
+      let output = `<ul>`; //starting the unordered list
+
+      for (const fruit of fruits) { //the loop to iterate over the array of fruits
+        output += `<li>Fruit ID: ${fruit.id}</li><li>Fruit Type: ${fruit.type}</li>`;
+      }
+      output += `</ul>`; //closing the unordered list
+
+      document.getElementById("fruits").innerHTML = output; //the final output
+    </script>
+  </body>
+</html>
+<!--End of program-->

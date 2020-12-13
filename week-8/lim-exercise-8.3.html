@@ -1,0 +1,95 @@
+<!--
+============================================
+; Title:  lim-exercise-8.2.html
+; Author: Professor Krasso
+; Modified by: Eunice Lim
+; Date:   10 Dec 2020
+; Attribution: With help from Prof. Krasso, Georgia Welch-Cronin
+; Description: Exercise 8.3 jQuery
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+  body {
+    font-family: 'Roboto', sans-serif; /*Roboto: 300, 400, 500 for the font*/
+  }
+
+  tr:nth-child(even) {
+  background-color: lightpink; /*Apply alternate background colors for each table row (you must use pure CSS)*/
+  }
+  #topbar{  /*Add a navbar (you must use pure CSS) and give it a different background color*/
+    background-color: orange;
+  }
+#A{
+  padding-top: 20px; /*Have both sections appear 20px below the topbar*/
+  padding-left:20px; /*Have both sections appear 20px to the left of the page*/
+}
+#B {
+  padding-left: 20px;/*Have both sections appear 20px to the left of the page*/
+}
+  </style>
+<body>
+<div id = "topbar">Topbar</div>
+  <!--Start of Part A-->
+  <div id="A">
+<h1>HTML Paragraph Title</h1> <!--Create an HTML paragraph and fill it with a paragraph of Lorem Ipsum data-->
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in felis id nisi pharetra euismod. Vivamus vestibulum feugiat diam, scelerisque iaculis lorem rutrum in. Proin aliquet, metus eget ultrices pulvinar, urna enim mattis justo, semper cursus augue sem at elit. Nam ac massa leo. Mauris libero libero, scelerisque quis felis vehicula, pulvinar interdum lectus. Aenean elit ex, viverra nec dui sed, pharetra euismod tortor. Sed eu elit sed sem dictum ultrices. Vestibulum dapibus, enim eu convallis sagittis, massa turpis accumsan risus, ut placerat neque tellus et nisl. Etiam pharetra lobortis augue, non hendrerit justo iaculis at. Suspendisse viverra mauris eu iaculis tristique. Proin ac tortor vel ex congue pharetra.
+  Cras in sodales nunc. Fusce tincidunt accumsan tortor sed vestibulum. </p>
+
+  <button>Toggle</button> <!--Underneath the paragraph add an HTML button and name it "Toggle" -->
+</div>
+<script type ="text/javascript">
+$(function(){
+  $("button").click(function(){  //using jQuery's "click" and "toggle" functions to register click even for Toggle button
+    $("p").toggle();  //show or hide the paragraph each time the button is clicked
+  });
+});
+</script>
+  <!--End of Part A-->
+<br />
+    <!--Start of Part B-->
+<div id ="B">  <!--Create an HTML table of at least five (5) fruits with ID and Type as fields -->
+  <table>
+      <tr>
+        <td><a href="#" class="fruitId">101</a></td>
+        <td>Apple</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">102</a></td>
+        <td>Banana</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">103</a></td>
+        <td>Cherry</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">104</a></td>
+        <td>Durian</td>
+      </tr>
+      <tr>
+        <td><a href="#" class="fruitId">105</a></td>
+        <td>Grapes</td>
+      </tr>
+    </div>
+<script type ="text/javascript">
+      $(".fruitId").click(function (event) { //Using jQuery's "click" function, register a click event for the ID field
+        event.preventDefault();
+        var fruitId = $(this).text();
+        var fruitType = $(this).closest("td").next().text();
+        alert("{fruit_id: " + fruitId + ", fruit_type: " + fruitType + "}"); //Output the ID and Type of the fruit to an alert window (user JavaScripts built-in alert() function)
+    });
+
+</script>
+<!--End of Part B-->
+</body>
+</html>
+<!--end of program-->

@@ -1,0 +1,36 @@
+<!--
+============================================
+; Title:  lim-discussion-8.1.html
+; Author: Professor Krasso
+; Modified by: Eunice Lim
+; Date:   9 Dec 2020
+; Description: Discussion 8.1 DOM Manipulation (jQuery)
+;===========================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8.1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!--The expected output is to have the sentence disappear when clicked on the button 'Disappear?' and reappear when the button is clicked again-->
+</head>
+<body>
+  <div id ="gone">
+<p>Too many words, make it go away.</p>
+</div>
+
+<button>Disappear?</button>
+
+<script>
+      $("button").click(function(){
+      $("gone").toggle(button);
+    });
+
+  </script>
+
+  </body>
+</html>
+<!--End-->
